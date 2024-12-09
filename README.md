@@ -1,9 +1,6 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 🏀 NBA MVP Predictor
 
-Description of the app ...
+This app predicts the players most likely to win this year's NBA MVP award
 
 ## Demo App
 
