@@ -15,5 +15,5 @@ with st.expander('Data'):
   X
 
   st.write('**y**')
-  y = df['RANK', 'PLAYER']
+  y = df[['PLAYER', 'RANK']]
   y
