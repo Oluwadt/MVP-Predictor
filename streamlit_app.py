@@ -28,7 +28,7 @@ with st.expander('Data Visualization'):
   colors = plt.cm.get_cmap("tab10", len(categories))
 
   for i, category in enumerate(categories):
-      cat_data = df[df["RANK"] == category]
+      cat_data = df[df["Category Name"] == category]
       ax.scatter(
         cat_data["YEAR"], 
         cat_data["PTS"], 
