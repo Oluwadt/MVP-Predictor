@@ -19,4 +19,11 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK')
+  c = (
+   alt.Chart(df)
+   .mark_circle()
+   .encode(x="MIN", y="PTS", size="RANK", color="RANK", tooltip=["1", "2", "3"])
+)
+
+st.altair_chart(c, use_container_width=True)
+  # st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK')
