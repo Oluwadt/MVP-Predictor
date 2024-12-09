@@ -32,7 +32,7 @@ with st.expander('Data Visualization'):
       ax.scatter(
         cat_data["YEAR"], 
         cat_data["PTS"], 
-        label=f"Category {category}", 
+        label=f"{category}", 
         color=colors(i),
         edgecolor='none',
         s=50
