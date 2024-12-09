@@ -20,6 +20,14 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
+  category_names = {1: "Low", 2: "Medium", 3: "High"}
+  df["Category Name"] = df["Category"].map(category_names)
+
+  plt.rcParams.update({
+    "font.family": "sans-serif",
+    "font.size": 12,
+  })
+  
   fig, ax = plt.subplots()
   categories = df["RANK"].unique()
   colors = plt.cm.get_cmap("tab10", len(categories))
@@ -39,7 +47,7 @@ with st.expander('Data Visualization'):
   # Add labels, title, and legend
   ax.set_xlabel("Year", fontsize=12)
   ax.set_ylabel("PPG", fontsize=12)
-  ax.legend(title="Category", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
+  ax.legend(title="MVP Chance", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
 
   st.pyplot(fig)
   # st.scatter_chart(data=df, x='YEAR', y='PTS', color='RANK')
