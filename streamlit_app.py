@@ -22,7 +22,7 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
   fig, ax = plt.subplots()
   categories = df["RANK"].unique()
-  colors = plt.cm.get_cmap("Set2", len(categories))
+  colors = plt.cm.get_cmap("tab10", len(categories))
 
   for i, category in enumerate(categories):
       cat_data = df[df["RANK"] == category]
@@ -30,11 +30,12 @@ with st.expander('Data Visualization'):
         cat_data["YEAR"], 
         cat_data["PTS"], 
         label=f"Category {category}", 
-        color=colors(i), 
-        edgecolor='black', 
-        s=100
+        color=colors(i),
+        edgecolor='none',
+        s=50
       )
-  
+
+  plt.ylim(0, 50)  
   # Add labels, title, and legend
   ax.set_xlabel("Year", fontsize=12)
   ax.set_ylabel("PPG", fontsize=12)
