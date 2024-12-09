@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.title('🏀 NBA MVP Predictor')
 
-st.info("This app predicts the players most likely to win this year's NBA MVP award.")
+st.info("This app predicts the players most likely to win this year's NBA MVP award based on past data.")
 
 with st.expander('Data'):
   st.write('**Raw Data**')
