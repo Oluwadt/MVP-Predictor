@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import altair as alt
 
 st.title('🏀 NBA MVP Predictor')
 
@@ -20,11 +19,4 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  c = (
-   alt.Chart(df)
-   .mark_circle()
-   .encode(x="MIN", y="PTS", size="RANK", color="RANK", tooltip=["1", "2", "3"])
-)
-
-st.altair_chart(c, use_container_width=True)
-  # st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK')
+  st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK', size='RANK')
