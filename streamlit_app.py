@@ -19,4 +19,4 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK', size='RANK')
+  st.scatter_chart(data=df, x='MIN', y='PTS', color='RANK')
