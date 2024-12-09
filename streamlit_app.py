@@ -23,11 +23,6 @@ with st.expander('Data Visualization'):
   category_names = {1: "Low", 2: "Medium", 3: "High"}
   df["Category Name"] = df["RANK"].map(category_names)
 
-  plt.rcParams.update({
-    "font.family": "sans-serif",
-    "font.size": 12,
-  })
-  
   fig, ax = plt.subplots()
   categories = df["Category Name"].unique()
   colors = plt.cm.get_cmap("tab10", len(categories))
@@ -44,7 +39,7 @@ with st.expander('Data Visualization'):
       )
 
   plt.ylim(0, 50)
-  plt.xlim(1990, 2025)
+  # plt.xlim(1990, 2025)
   # Add labels, title, and legend
   ax.set_xlabel("Year", fontsize=12)
   ax.set_ylabel("PPG", fontsize=12)
