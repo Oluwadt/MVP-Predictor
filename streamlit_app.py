@@ -11,9 +11,9 @@ with st.expander('Data'):
   df
 
   st.write('**X**')
-  X = df.drop(['RANK', 'PLAYER'], axis=1).values
+  X = df.drop(['RANK', 'PLAYER'], axis=1)
   X
 
   st.write('**y**')
-  y = df.drop(['RANK', 'PLAYER'], axis=1).values
+  y = df.drop(['RANK', 'PLAYER'], axis=1)
   y
