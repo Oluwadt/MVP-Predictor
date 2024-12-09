@@ -20,18 +20,26 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
+  plt.style.use('seaborn-whitegrid')
   fig, ax = plt.subplots()
   categories = df["RANK"].unique()
   colors = plt.cm.get_cmap("tab10", len(categories))  # Generate a colormap
 
   for i, category in enumerate(categories):
       cat_data = df[df["RANK"] == category]
-      ax.scatter(cat_data["YEAR"], cat_data["PTS"], label=f"Category {category}", color=colors(i))
+      ax.scatter(
+        cat_data["YEAR"], 
+        cat_data["PTS"], 
+        label=f"Category {category}", 
+        color=colors(i), 
+        edgecolor='black', 
+        s=100
+      )
   
   # Add labels, title, and legend
-  ax.set_xlabel("Year")
-  ax.set_ylabel("PPG")
-  ax.legend(title="Category")
+  ax.set_xlabel("Year", fontsize=12)
+  ax.set_ylabel("PPG", fontsize=12)
+  ax.legend(title="Category", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
 
   st.pyplot(fig)
   # st.scatter_chart(data=df, x='YEAR', y='PTS', color='RANK')
