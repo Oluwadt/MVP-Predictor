@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import C as alt
 
 st.title('🏀 NBA MVP Predictor')
 
