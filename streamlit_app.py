@@ -20,7 +20,7 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  category_names = {1: "Low", 2: "Medium", 3: "High"}
+  category_names = {1: "Low", 2: "High", 3: "Very High"}
   df["Category Name"] = df["RANK"].map(category_names)
 
   fig, ax = plt.subplots()
