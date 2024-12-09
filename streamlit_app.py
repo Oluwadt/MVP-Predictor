@@ -21,7 +21,7 @@ with st.expander('Data'):
 
 with st.expander('Data Visualization'):
   category_names = {1: "Low", 2: "Medium", 3: "High"}
-  df["Category Name"] = df["Category"].map(category_names)
+  df["Category Name"] = df["RANK"].map(category_names)
 
   plt.rcParams.update({
     "font.family": "sans-serif",
@@ -29,7 +29,7 @@ with st.expander('Data Visualization'):
   })
   
   fig, ax = plt.subplots()
-  categories = df["RANK"].unique()
+  categories = df["Category Name"].unique()
   colors = plt.cm.get_cmap("tab10", len(categories))
 
   for i, category in enumerate(categories):
