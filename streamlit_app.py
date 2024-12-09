@@ -17,3 +17,6 @@ with st.expander('Data'):
   st.write('**y**')
   y = df[['PLAYER', 'RANK']]
   y
+
+with st.expander('Data Visualization'):
+  st.scatterchart(data=df, x='MIN', y='PTS', color='RANK')
