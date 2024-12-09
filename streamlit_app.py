@@ -20,10 +20,9 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  plt.style.use('seaborn-whitegrid')
   fig, ax = plt.subplots()
   categories = df["RANK"].unique()
-  colors = plt.cm.get_cmap("tab10", len(categories))  # Generate a colormap
+  colors = plt.cm.get_cmap("Set2", len(categories))
 
   for i, category in enumerate(categories):
       cat_data = df[df["RANK"] == category]
