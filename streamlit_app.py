@@ -9,3 +9,11 @@ with st.expander('Data'):
   st.write('**Raw Data**')
   df = pd.read_csv('https://raw.githubusercontent.com/Oluwadt/NBA-MVP-Predictor/refs/heads/main/combined_past_data.csv')
   df
+
+  st.write('**X**')
+  X = df.drop(['RANK', 'PLAYER'], axis=1).values
+  X
+
+  st.write('**y**')
+  y = df.drop(['RANK', 'PLAYER'], axis=1).values
+  y
