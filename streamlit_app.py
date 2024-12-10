@@ -38,7 +38,7 @@ with st.expander('Data Visualization'):
         s=50
       )
 
-  plt.ylim(0, 50)
+  # plt.ylim(0, 50)
   # plt.xlim(1990, 2025)
   # Add labels, title, and legend
   ax.set_xlabel("Efficiency", fontsize=12)
