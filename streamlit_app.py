@@ -31,7 +31,7 @@ with st.expander('Data Visualization'):
       cat_data = df[df["Category Name"] == category]
       ax.scatter(
         cat_data["EFF"], 
-        cat_data["TOV"], 
+        cat_data["FG_PCT"], 
         label=f"{category}", 
         color=colors(i),
         edgecolor='none',
@@ -41,7 +41,7 @@ with st.expander('Data Visualization'):
   plt.ylim(0, 50)
   # plt.xlim(1990, 2025)
   # Add labels, title, and legend
-  ax.set_xlabel("Year", fontsize=12)
+  ax.set_xlabel("Efficiency", fontsize=12)
   ax.set_ylabel("PPG", fontsize=12)
   ax.legend(title="MVP Chance", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
 
