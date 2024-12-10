@@ -30,8 +30,8 @@ with st.expander('Data Visualization'):
   for i, category in enumerate(categories):
       cat_data = df[df["Category Name"] == category]
       ax.scatter(
-        cat_data["YEAR"], 
-        cat_data["PTS"], 
+        cat_data["EFF"], 
+        cat_data["TOV"], 
         label=f"{category}", 
         color=colors(i),
         edgecolor='none',
