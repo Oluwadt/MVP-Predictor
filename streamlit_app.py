@@ -61,9 +61,10 @@ with st.sidebar:
   # }
   # input_df = pd.DataFrame(input_data, index=[0])
 player_df
-st.markdown("""
-<div style="padding: 1.5rem; background-color: #f0f2f6; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <h3 style="margin: 0; color: #1f77b4;">Info Card Title</h3>
-    <p style="margin: 0.5rem 0 0; color: #333;">This is the content of the info card. You can provide important information here.</p>
+st.markdown(f"""
+<div style="padding: 1.5rem; background-color: #f9fbfc; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin: 0; color: #4CAF50;">{player_df['PLAYER']} Year: {player_df['YEAR']}</h3>
+    <p style="margin: 0.5rem 0 0; color: #333;">PPG: {player_df['PTS']} APG: {player_df['AST']} RPG: {player_df['REB']}
+    BLK: {player_df['BLK']} STL: {player_df['STL']} TOV: {player_df['TOV']}</p>
 </div>
 """, unsafe_allow_html=True)
