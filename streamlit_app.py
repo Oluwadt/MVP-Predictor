@@ -37,3 +37,10 @@ with st.expander('Data Visualization'):
   
   # Display the chart in Streamlit
   st.altair_chart(chart, use_container_width=True)
+
+with st.sidebar:
+  st.header("Stats")
+  ppg = st.slider("Points Per Game", 0, 15, 100)
+  ast = st.slider("Assists Per Game"), 0, 4, 40)
+  oreb = st.slider("Offensive Rebounds Per Game"), 0, 4, 30)
+  dreb = st.slider("Defensive Rebounds Per Game"), 0, 4, 30)
