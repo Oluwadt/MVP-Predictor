@@ -20,6 +20,8 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
+  category_labels = {1: "Low", 2: "Medium", 3: "High"}
+  df["Category Name"] = df["RANK"].map(category_labels)
   # category_names = {1: "Low", 2: "High", 3: "Very High"}
   # df["Category Name"] = df["RANK"].map(category_names)
 
@@ -45,4 +47,9 @@ with st.expander('Data Visualization'):
   # ax.legend(title="MVP Chance", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
 
   # st.pyplot(fig)
-  st.scatter_chart(data=df, x='YEAR', y='PTS', color='RANK')
+  st.scatter_chart(data=df, 
+                   x='YEAR', 
+                   y='PTS', 
+                   color="Category Name"
+                  )
+  # st.scatter_chart(data=df, x='YEAR', y='PTS', color='RANK')
