@@ -20,7 +20,7 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  category_labels = {1: "Low", 2: "Medium", 3: "High"}
+  category_labels = {1: "Low", 2: "High", 3: "Very High"}
   df["MVP Chance"] = df["RANK"].map(category_labels)
   # category_names = {1: "Low", 2: "High", 3: "Very High"}
   # df["Category Name"] = df["RANK"].map(category_names)
