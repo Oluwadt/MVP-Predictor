@@ -44,6 +44,10 @@ with st.sidebar:
   year_players = df[df["YEAR"] == year]['PLAYER'].values
   player = st.selectbox("Player", year_players)
   
+  mask_player = df["PLAYER"] == player
+  mask_year = df["YEAR"] == year
+  player_df = df[mask_player & mask_year]
+  
   # ppg = st.slider("Points Per Game", 0.0, 15.5, 100.0)
   # ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
   # oreb = st.slider("Offensive Rebounds Per Game", 0.0, 4.5, 40.0)
@@ -56,3 +60,4 @@ with st.sidebar:
   #   'DREB': dreb
   # }
   # input_df = pd.DataFrame(input_data, index=[0])
+player_df
