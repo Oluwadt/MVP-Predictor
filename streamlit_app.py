@@ -41,20 +41,19 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header("Stats")
   year = st.selectbox("Year", list(range(1991, 2026)))
-  year_players = df[df["YEAR"] == year]['PLAYER'].uniques()
+  year_players = df[df["YEAR"] == year]['PLAYER']
   
-  ppg = st.slider("Points Per Game", 0.0, 15.5, 100.0)
-  ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
-  oreb = st.slider("Offensive Rebounds Per Game", 0.0, 4.5, 40.0)
-  dreb = st.slider("Defensive Rebounds Per Game", 0.0, 4.5, 40.0)
+  # ppg = st.slider("Points Per Game", 0.0, 15.5, 100.0)
+  # ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
+  # oreb = st.slider("Offensive Rebounds Per Game", 0.0, 4.5, 40.0)
+  # dreb = st.slider("Defensive Rebounds Per Game", 0.0, 4.5, 40.0)
 
-  input_data = {
-    'PPG': ppg,
-    'AST': ast,
-    'OREB': oreb,
-    'DREB': dreb
-  }
-  input_df = pd.DataFrame(input_data, index=[0])
+  # input_data = {
+  #   'PPG': ppg,
+  #   'AST': ast,
+  #   'OREB': oreb,
+  #   'DREB': dreb
+  # }
+  # input_df = pd.DataFrame(input_data, index=[0])
 
-input_df
 year_players
