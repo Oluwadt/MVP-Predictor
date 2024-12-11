@@ -47,9 +47,21 @@ with st.expander('Data Visualization'):
   # ax.legend(title="MVP Chance", title_fontsize=12, fontsize=10, loc="upper left", frameon=False)
 
   # st.pyplot(fig)
-  st.scatter_chart(data=df, 
-                   x='YEAR', 
-                   y='PTS', 
-                   color="MVP Chance"
-                  )
-  # st.scatter_chart(data=df, x='YEAR', y='PTS', color='RANK')
+  
+  # st.scatter_chart(data=df, x='YEAR', y='PTS', color="MVP Chance")
+
+  # Define x-axis range
+  x_min, x_max = 1990, 2025  # Customize the range as needed
+  
+  # Create Altair scatter plot
+  chart = alt.Chart(df).mark_circle(size=100).encode(
+      x=alt.X("YEAR", scale=alt.Scale(domain=[x_min, x_max])),  # Set x-axis range
+      y="PTS",
+      color=alt.Color("MVP Chance", title="MVP Chance"),  # Custom legend
+      tooltip=["YEAR", "PTS", "MVP Chance"]  # Optional: Add tooltips
+  ).properties(
+      title="Scatter Chart with Custom X-Axis Range"
+  )
+  
+  # Display the chart in Streamlit
+  st.altair_chart(chart, use_container_width=True)
