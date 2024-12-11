@@ -63,7 +63,7 @@ with st.sidebar:
 player_df
 st.markdown(f"""
 <div style="padding: 1.5rem; background-color: #f9fbfc; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-    <h3 style="margin: 0; color: #4CAF50;">{player_df['PLAYER'].values} Year: {player_df['YEAR']}</h3>
+    <h3 style="margin: 0; color: #4CAF50;">{player_df['PLAYER'].values[0]} Year: {player_df['YEAR']}</h3>
     <p style="margin: 0.5rem 0 0; color: #333;">PPG: {player_df['PTS']} APG: {player_df['AST']} RPG: {player_df['REB']}
     BLK: {player_df['BLK']} STL: {player_df['STL']} TOV: {player_df['TOV']}</p>
 </div>
