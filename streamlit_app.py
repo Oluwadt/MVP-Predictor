@@ -40,6 +40,7 @@ with st.expander('Data Visualization'):
 
 with st.sidebar:
   st.header("Stats")
+  year = st.selectbox("Year", list(range(1991, 2025)))
   ppg = st.slider("Points Per Game", 0.0, 15.5, 100.0)
   ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
   oreb = st.slider("Offensive Rebounds Per Game", 0.0, 4.5, 40.0)
