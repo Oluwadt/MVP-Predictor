@@ -44,3 +44,13 @@ with st.sidebar:
   ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
   oreb = st.slider("Offensive Rebounds Per Game", 0.0, 4.5, 40.0)
   dreb = st.slider("Defensive Rebounds Per Game", 0.0, 4.5, 40.0)
+
+  input_data = {
+    'PPG': ppg,
+    'AST': ast,
+    'OREB': oreb,
+    'DREB': dreb
+  }
+  input_df = pd.DataFrame(input_data)
+
+input_df
