@@ -60,7 +60,6 @@ with st.sidebar:
   #   'DREB': dreb
   # }
   # input_df = pd.DataFrame(input_data, index=[0])
-player_df
 st.markdown(f"""
 <div style="padding: 1.5rem; background-color: #f9fbfc; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
     <h3 style="margin: 0; color: #4CAF50;">{player_df['PLAYER'].values[0]} Year: {player_df['YEAR'].values[0]}</h3>
