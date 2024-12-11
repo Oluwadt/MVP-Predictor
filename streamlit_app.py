@@ -42,6 +42,7 @@ with st.sidebar:
   st.header("Stats")
   year = st.selectbox("Year", list(range(1991, 2026)))
   year_players = df[df["YEAR"] == year]['PLAYER'].values
+  player = st.selectbox("Player", year_players)
   
   # ppg = st.slider("Points Per Game", 0.0, 15.5, 100.0)
   # ast = st.slider("Assists Per Game", 0.0, 4.5, 40.0)
@@ -55,5 +56,3 @@ with st.sidebar:
   #   'DREB': dreb
   # }
   # input_df = pd.DataFrame(input_data, index=[0])
-
-year_players
